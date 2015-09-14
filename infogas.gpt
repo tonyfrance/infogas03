@@ -1,1 +1,19 @@
+algoritmo infogas03;
 
+variáveis
+    kmi:real
+    horai:inteiro
+    mini:inteiro
+    disttotal:real
+fim-variáveis
+
+início
+    imprima("Digite o Odometro Inicial: ");
+    kmi:=leia();
+    imprima("Digite as Horas iniciais da partida: ");
+    horasi:=leia();
+    imprima("Digite os minutos: ");
+    mini:=leia();
+    imprima:=("Digite a distancia total do percurso: ");
+ 
+fim
