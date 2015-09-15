@@ -5,6 +5,16 @@ variáveis
     horai:inteiro
     mini:inteiro
     disttotal:real
+    tempoini_min:real
+    litrosf:real
+    litrosparc:real
+    consumo:real
+    consumof:real
+    saida:literal
+    escolha:literal
+    paradas:inteiro
+    odometro:real
+    last_odometro:real
 fim-variáveis
 
 início
@@ -14,6 +24,23 @@ início
     horasi:=leia();
     imprima("Digite os minutos: ");
     mini:=leia();
-    imprima:=("Digite a distancia total do percurso: ");
- 
+    imprima("Digite a distancia total do percurso: ");
+    disttotal:=leia();
+    tempoini_min=:horasi*60+mini;
+    imprima("Digite 'p' para entrar no programa");
+    last_odometro=kmi;
+    enquanto kmf<disttotal ou saida!='c' faça
+        escolha:-leia();
+        se escolha='p'então
+            imprima("Digite o Odometro atual: );
+            odometro:=leia();
+            kmf:=kmf+(odometro-last_odometro);
+            imprima("Digite as horas da parada: ");
+            horasi:=leia();
+            imprima("Digite os minutos da parada: ");
+            mini:=leia();
+            
+
+
+     
 fim
