@@ -8,12 +8,11 @@ int main()
     printf("programa referencial para abastecimento:");
     printf("\nObs: o tempo do programa deve entrar em forma de\n HH:MM no formato de 24h");
     char escolha,sair,timeini[6];
-    struct lkt{
+    struct lkt;
     float litros;
     float consumo;
     float velocidade;
-    char tempo[6];
-    };
+    char tempo[];
     struct lkt viagem;
     float km,hr,t,lf,lp,ci,cf,sd,pd,vf,vp;
     float velocidade;
