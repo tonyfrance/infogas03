@@ -14,5 +14,9 @@ int main()
     float velocidade;
     char tempo [];
 return 0;
-}
+    };
+    struct lkt control[];
+    printf("\nDigite o valor inicial do Odometro: ");
+    float kmi,disttotal; //quilometro inicial
+    scanf("%f",&kmi);
 
