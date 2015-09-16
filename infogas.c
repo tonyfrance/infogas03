@@ -12,7 +12,11 @@ int main(void)
     printf("Digite o numero de paradas que você fara no caminho:\n");
     scanf("%f",&n);
     printf("Digite que horas sao:\n");
+    scanf("%f:%f",&hi,&mini);
     printf("Digite o odometro atual do carro:\n");
+    scanf("%f",&odoi);
     printf("Digite volume atual do tanque de combustivel:\n");
-    prontf("Distancia a ser percorrida:\n");
+    scanf("%f",&gli);
+    printf("Distancia a ser percorrida:\n");
+    scanf("%f",&km);
 }
