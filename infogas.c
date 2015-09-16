@@ -11,4 +11,8 @@ int main(void)
     printf("3-O volume do tanque deve estar em L\n");
     printf("Digite o numero de paradas que você fara no caminho:\n");
     scanf("%f",&n);
+    printf("Digite que horas sao:\n");
+    printf("Digite o odometro atual do carro:\n");
+    printf("Digite volume atual do tanque de combustivel:\n");
+    prontf("Distancia a ser percorrida:\n");
 }
