@@ -20,6 +20,13 @@ int main(void)
     printf("Distancia a ser percorrida:\n");
     scanf("%f",&km);
     for(i=0;i<n;i++)
+    {
+        printf("Parada %f:\n",i+1);
+        printf("Que horas são?\n");
+        scanf("%f:%f",&h,&min);
+        printf("Valor atual do odometro?\n");
+        scanf("%f",&odo);
+        printf("Volume do tanque de combustivel?\n");
 
 
 
