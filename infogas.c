@@ -26,3 +26,4 @@ return 0;
     int i=0;
     for(i=0;i<2;i++);
     char horasref[3], minutosref[3];
+    int i=0;
