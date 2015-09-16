@@ -19,4 +19,6 @@ int main(void)
     scanf("%f",&gli);
     printf("Distancia a ser percorrida:\n");
     scanf("%f",&km);
+    for(i=0;i<n;i++)
 }
+
