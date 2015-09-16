@@ -19,4 +19,10 @@ return 0;
     printf("\nDigite o valor inicial do Odometro: ");
     float kmi,disttotal; //quilometro inicial
     scanf("%f",&kmi);
-
+    
+    printf("\nDigite o instante de tempo inicial em HH:MM : ");
+    scanf("%s", &timeni);
+    char horasref[], minutosref[];//variaveis intermediarias,conversão str to int
+    int i=0;
+    for(i=0;i<2;i++);
+    
