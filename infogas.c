@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
+
 
 int main()
 {
@@ -12,20 +12,10 @@ int main()
         float litros;
         float consumo;
         float velocidade;
-        char tempo[];
+        char tempo[6];
   };
-    struct lkt control[];
-    printf("\nDigite o valor inicial do Odometro:  ");
-    float kmi, disttotal; //quilometro inicial
-    scanf("%f", &kmi);
+    struct lkt viagem;
 
-    printf("\nDigite o instante de tempo inicial em HH:MM : ");
-    scanf("%s", &timeini);
-    char horasref[], minutosref[]; //variaveis intermediarias, conversao str to int
-    int i=0;
-    for(i=0;i<2;i++) 
-
-    
     printf("\nDigite o valor inicial do Odometro: ");
     float kmi,disttotal; //quilometro inicial
     scanf("%f",&kmi);
@@ -34,12 +24,45 @@ int main()
     scanf("%s", &timeini);
     char horasref[3], minutosref[3];//variaveis intermediarias,conversão str to int
     int i=0;
-    char horasref[3], minutosref[3];
+
     for(i=0;i<2;i++)
     {
         horasref[i]=timeini[i];
-        minutosref[i]=timerini[(3+i)];
+        minutosref[i]=timeini[(3+i)];
     }
     horasref[2]='\0';
     minutosref[2]='\0';
+    float horas, min, tempoini;
+    horas=atoi(horasref);
+    min=atoi(minutosref);
+    tempoini=horas*60+min;//conversão de tempo, trabalhando com minutos.
+    printf("\nDigite a distancia total da viagem em Km: ");
+    scanf("%f", &disttotal);
+    int cont;
+    printf("\nNumero de paradas: %d", cont);
+    printf("\nPara entrar no programa digite 'p' ");
+
+    float litrosf=0, kmf=0, odometro=0, last_odometro=0, las_h=0, last_m=0, consumof=0;
+    last_odometro=kmi;
+    do
+    {
+        scanf("s", &escolha);
+        if(escolha=='p')
+        {
+
+        }
+        else
+            printf("\nComando Invalido!\n");
+
+        if(kmf>=distotal)
+        {
+            printf("ULTIMO BASTECIMENTO? s/n ");
+            scanf("%s", &sair);
+        }
+    }while(kmf<disttotal || sair!='s');
+
+    printf("\nRelatorio Final: ");
+    printf("\nVelocidade Media Total: %.2f", disttotal/ /*aqui vai entrar o tempo final - tempo inicial*/);
+    printf("\nConsumo de Combustivel: %.2f", /*somatorio de todos os litros dos trechos*/);
+    return 0;
 }
