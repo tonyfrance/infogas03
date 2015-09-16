@@ -1,22 +1,22 @@
 algoritmo infogas03;
 
 variáveis
-    kmi:real
-    horai:inteiro
-    mini:inteiro
-    disttotal:real
-    tempoini_min:real
-    litrosf:real
-    litrosparc:real
-    consumo:real
-    consumof:real
-    saida:literal
-    escolha:literal
-    paradas:inteiro
-    odometro:real
-    last_odometro:real
-    velocidadep:real
-    velocidadef:real
+    kmi:real;
+    horai:inteiro;
+    mini:inteiro;
+    disttotal:real;
+    tempoini_min:real;
+    litrosf:real;
+    litrosparc:real;
+    consumo:real;
+    consumof:real;
+    saida:literal;
+    escolha:literal;
+    paradas:inteiro;
+    odometro:real;
+    last_odometro:real;
+    velocidadep:real;
+    velocidadef:real;
 fim-variáveis
 
 início
@@ -28,22 +28,22 @@ início
     mini:=leia();
     imprima("Digite a distancia total do percurso: ");
     disttotal:=leia();
-    tempoini_min=:horasi*60+mini;
+    tempoini_min:=horasi*60+mini;
     imprima("Digite 'p' para entrar no programa");
-    last_odometro=kmi;
-    enquanto kmf<disttotal ou saida!='c' faça
-        escolha:-leia();
+    last_odometro:=kmi;
+    enquanto kmf<disttotal ou saida<>'s' faça
+        escolha:=leia();
         se escolha='p'então
-            imprima("Digite o Odometro atual: );
+            imprima("Digite o Odometro atual: ");
             odometro:=leia();
             kmf:=kmf+(odometro-last_odometro);
+            last_tempo:=horasi*60+mini;
             imprima("Digite as horas da parada: ");
             horasi:=leia();
             imprima("Digite os minutos da parada: ");
             mini:=leia();
-            last_tempo:=
-            velocidadep:=(odometro-last_odometro)/(; //incompleto
-
-
-     
+            velocidadep:=(odometro-last_odometro)/(((horasi*60+mini)-last_tempo)/60);
+            
+        fim-se
+    fim-enquanto 
 fim
