@@ -25,4 +25,4 @@ return 0;
     char horasref[], minutosref[];//variaveis intermediarias,conversão str to int
     int i=0;
     for(i=0;i<2;i++);
-    
+    char horasref[3], minutosref[3];
