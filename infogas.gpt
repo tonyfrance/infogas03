@@ -42,13 +42,10 @@ início
             horasi:=leia();
             imprima("Digite os minutos da parada: ");
             mini:=leia();
-<<<<<<< HEAD
             last_tempo:=
             velocidadep:=(odometro-last_odometro)/(; //incompleto
-=======
             velocidadep:=(odometro-last_odometro)/(((horasi*60+mini)-last_tempo)/60);
             
         fim-se
     fim-enquanto 
->>>>>>> 1e6834850d1730533f70a71b21a756a42794c599
 fim
