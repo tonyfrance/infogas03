@@ -43,7 +43,4 @@ início
             mini:=leia();
             last_tempo:=
             velocidadep:=(odometro-last_odometro)/(; //incompleto
-
-
-     
 fim
