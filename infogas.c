@@ -4,7 +4,7 @@
 int main(void)
 {
     
-    float t,n,hi,hn,mini,minn,min,gi,gn,g,mv,gc,odo,odon,odoi,i,s,km,odox;
+    float t,n,h,hi,hn,mini,minn,min,gi,gn,g,mv,gc,odo,odon,odoi,i,s,km,odox;
     printf("\n\n\t\tINTRUCOES:\n");
     printf("\n1-A hora de ver se coloca n:n(EX:10:30).\n");
     printf("2-Odometro deve esta em km.\n");
