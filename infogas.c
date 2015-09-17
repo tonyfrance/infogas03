@@ -38,7 +38,7 @@ int main(void)
         {
            t*=-1;
 
-           t-=1;//13:20-12:50
+           t-=1; 
         }
         t+=(h-hn);
         s=odo-odon;
@@ -50,8 +50,16 @@ int main(void)
         printf("\nVelocidade Media Parcial = %fKm/h\n", s/t);
         printf("Consumo de Combustivel = %fKm/l\n", s/g);
         printf("Previsao de chegada no destino = %fHoras\n", km/(s/t));
-        gn+=gc;//g=30, gc=20;gn=0,gn=gn-g, gn=-30, gn=-30+20; gn=-10
-             
+        gn+=gc;
+        printf("Ultima parada: \n");
+        printf("\nQue horas sao?\n");
+        scanf("%f:%f", &h, &min);
+        printf("Ultimo abastecimento? \n0-NAO\n1-SIM/n");
+        fflush(stdin);
+        int ab;
+        scanf("%d", &ab);
+        if(ab==1)
+           
 
 
     return EXIT_SUCCESS;
