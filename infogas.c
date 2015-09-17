@@ -59,7 +59,22 @@ int main(void)
         int ab;
         scanf("%d", &ab);
         if(ab==1)
-           
+        {
+            printf("\nFoi Abastecido quantos litros de gasolina?\n");
+            scanf("%f", &gc);
+
+        }                        
+        t=(min-mini)/60;
+        if(mini>min)
+        {
+            t*=-1;
+            t-=1;
+        }
+        t+=(h-hi);
+        s=odo-odoi;
+        gi-=g;
+        printf("Velocidade media final de viagem =%fKm/h", s/t);
+        printf("\nConsumo total= %fKm/l", s/gi);
 
 
     return EXIT_SUCCESS;
