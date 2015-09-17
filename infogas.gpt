@@ -2,7 +2,7 @@ algoritmo infogas03;
 
 variáveis
     kmi:real;
-    horai:inteiro;
+    hri:inteiro;
     mini:inteiro;
     disttotal:real;
     tempoini_min:real;
