@@ -4,8 +4,8 @@
 int main(void)
 {
     
-    float n,hi,h,hn,mini,min,minn,p,gi,g,vp,vmf,gc,odo,odoi,i,km;
-    printf("\n\nINTRUCOES:\n");
+    float t,n,hi,mini,minn,min,gi,gn,g,mv,gc,odo,odon,odoi,i,s,km,odox;
+    printf("\n\n\t\tINTRUCOES:\n");
     printf("\n1-A hora de ver se coloca n:n(EX:10:30).\n");
     printf("2-Odometro deve esta em km.\n");
     printf("3-O volume do tanque deve estar em L\n");
@@ -19,6 +19,9 @@ int main(void)
     scanf("%f",&gli);
     printf("Distancia a ser percorrida:\n");
     scanf("%f",&km);
+    minn=mini;
+    odon=odoi;
+    hn=hi;
     for(i=0;i<n;i++)
     {
         printf("Parada %f:\n",i+1);
@@ -27,7 +30,28 @@ int main(void)
         printf("Valor atual do odometro?\n");
         scanf("%f",&odo);
         printf("Volume do tanque de combustivel?\n");
+        scanf("%f", &g);
+        printf("Foi abastecido quantos litros de gasolina? \n");
+        scanf("%f", &gc);
+        t=(min-minn)/60;
+        if(minn>min)
+        {
+           t*=-1;
 
+           t-=1;//13:20-12:50
+        }
+        t+=(h-hn);
+        s=odo-odon;
+        printf("%f-distancia \n%f-tempo", s, t);
+        odon=odo;
+        hn=h;
+        minn=min;
+        gn-=g;
+        printf("\nVelocidade Media Parcial = %fKm/h\n", s/t);
+        printf("Consumo de Combustivel = %fKm/l\n", s/g);
+        printf("Previsao de chegada no destino = %fHoras\n", km/(s/t));
+        gn+=gc;//g=30, gc=20;gn=0,gn=gn-g, gn=-30, gn=-30+20; gn=-10
+             
 
 
     return EXIT_SUCCESS;
