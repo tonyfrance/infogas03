@@ -4,7 +4,9 @@
 int main(void)
 {
     
+    int ab;
     float t,n,h,hi,hn,mini,minn,min,gi,gn,g,mv,gc,odo,odon,odoi,i,s,km,odox;
+    
     printf("\n\n\t\tINTRUCOES:\n");
     printf("\n1-A hora de ver se coloca n:n(EX:10:30).\n");
     printf("2-Odometro deve esta em km.\n");
@@ -22,6 +24,7 @@ int main(void)
     minn=mini;
     odon=odoi;
     hn=hi;
+    
     for(i=0;i<n;i++)
     {
         printf("Parada %f:\n",i+1);
@@ -40,6 +43,7 @@ int main(void)
 
            t-=1; 
         }
+        
         t+=(h-hn);
         s=odo-odon;
         printf("%f-distancia \n%f-tempo", s, t);
@@ -56,7 +60,7 @@ int main(void)
         scanf("%f:%f", &h, &min);
         printf("Ultimo abastecimento? \n0-NAO\n1-SIM/n");
         fflush(stdin);
-        int ab;
+        
         scanf("%d", &ab);
         if(ab==1)
         {
@@ -75,8 +79,8 @@ int main(void)
         gi-=g;
         printf("Velocidade media final de viagem =%fKm/h", s/t);
         printf("\nConsumo total= %fKm/l", s/gi);
+   }
 
 
     return EXIT_SUCCESS;
 }
-
