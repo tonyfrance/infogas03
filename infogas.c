@@ -58,7 +58,7 @@ int main(void)
         printf("Ultima parada: \n");
         printf("\nQue horas sao?\n");
         scanf("%f:%f", &h, &min);
-        printf("Ultimo abastecimento? \n0-NAO\n1-SIM/n");
+        printf("Ultimo abastecimento? \n0-NAO\n1-SIM\n");
         fflush(stdin);
         
         scanf("%d", &ab);
