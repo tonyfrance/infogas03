@@ -20,8 +20,11 @@ variáveis
     i:inteiro;
     s:real;
     km:real;
-    tempomin:inteiro;
-    
+    temp:real;
+    htemp:inteiro;
+    mintemp:inteiro;
+    tempomin:real;
+
 fim-variáveis
 
 início
@@ -73,11 +76,16 @@ início
         odon:=odo;
         hn:=h;
         minn:=min;
-        gn:=gn-g;
+        gn:=gn-(gn-g);
         imprima("Velocidade Media Parcial: ",(s/t),"Km/h");
         imprima("Consumo de combustivel: ",(s/gn),"Km/L");
+        km:=km-s;
+        temp:=km/(s/t);
+        gn:=gn+gc;
+        htemp:=temp;
+        mintemp:=(temp-htemp)*60;
+        imprima("Previsao de chegada: ",htemp,":",mintemp);
         
-        imprima("Previsao de chegada: ",tempomin/60,":", tempomin%60);
     fim-para
 
 fim
