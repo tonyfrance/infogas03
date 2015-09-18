@@ -47,6 +47,7 @@ início
     minn:=mini;
     odon:=odoi;
     hn:=hi;
+    gn:=0;
     gn:=gn+gi;
     para i de 1 até n passo 1 faça
         imprima("Parada: ", i);
@@ -76,9 +77,10 @@ início
         odon:=odo;
         hn:=h;
         minn:=min;
-        gn:=gn-(gn-g);
+        imprima(gn);
         imprima("Velocidade Media Parcial: ",(s/t),"Km/h");
-        imprima("Consumo de combustivel: ",(s/gn),"Km/L");
+        imprima("Consumo de combustivel: ",(s/(gn-g)),"Km/L");
+        gn:=gn-(gn-g);
         km:=km-s;
         temp:=km/(s/t);
         gn:=gn+gc;
