@@ -51,7 +51,7 @@ int main(void)
         odon=odo;
         hn=h;
         minn=min;
-        gn+=g;
+        gn-=g;
         temp=s/gn;
         km-=s;
         printf("Consumo de Combustivel = %fKm/l\n",temp);
@@ -61,11 +61,15 @@ int main(void)
         printf("Ultima parada: \n");
         printf("\nQue horas sao?\n");
         scanf("%f:%f", &h, &min);
-        printf("Ultimo abastecimento? \n0-NAO\n1-SIM\n");
+        printf("Valor atual do odometro?\n");
+        scanf("%f",&odo);
+        printf("Volume atual do tanque do combustivel?\n");
+        scanf("%f",&g);
+        printf("Ultimo abastecimento? (s/n)\n");
+        scanf("%c",&ab);
         fflush(stdin);
-        
-        scanf("%d", &ab);
-        if(ab==1)
+                
+        if(ab=='s')
         {
             printf("\nFoi Abastecido quantos litros de gasolina?\n");
             scanf("%f", &gc);
