@@ -5,8 +5,14 @@ int main(void)
 {
     
 
-    float t,temp,n,hi,h,hn,mini,min,minn,gn,cmt,g,gc,odo,odon,odoi,i,s,km;
+    float t,temp,n,hi,h,hn,mini,min,minn,cmt,gn,g,gc,odo,odon,odoi,i,s,km;
     char ab;
+    /*t=temp=tempo*/
+    /*n=numero de paradas*/
+    /*h=hora de final de viagem\hn=hora em que acontece a parada\hi=hora de início de viagem*/
+    /*mini=minutos de início de viagem\min=minutos finais de viagem\minn=minutos em que acontece a parada*/
+    /*cmt=consumo total de gasolina usada na viagem*/
+
     printf("\n\nINTRUCOES:\n");
     printf("\n1-A hora que deve ser colocada seguindo o exemplo n:n(EX:10:30).\n");
     printf("2-Odometro deve estar em km.\n");
