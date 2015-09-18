@@ -1,51 +1,85 @@
 algoritmo infogas03;
 
 variáveis
-    kmi:real;
-    hri:inteiro;
-    mini:inteiro;
-    disttotal:real;
-    tempoini_min:real;
-    litrosf:real;
-    litrosparc:real;
-    consumo:real;
-    consumof:real;
-    saida:literal;
-    escolha:literal;
-    paradas:inteiro;
-    odometro:real;
-    last_odometro:real;
-    velocidadep:real;
-    velocidadef:real;
+    t:real;
+    n:inteiro;
+    hi:real;
+    h:real;
+    hn:real;
+    mini:real;
+    minn:real;
+    min:real;
+    gi:real;
+    gn:real;
+    g:real;
+    vm:real;
+    gc:real;
+    odo:real;
+    odon:real;
+    odoi:real;
+    i:inteiro;
+    s:real;
+    km:real;
+    tempomin:inteiro;
+    
 fim-variáveis
 
 início
-    imprima("Digite o Odometro Inicial: ");
-    kmi:=leia();
-    imprima("Digite as Horas iniciais da partida: ");
-    horasi:=leia();
+    imprima("Instrucoes");
+    imprima("A hora deve ser colocada em HH e dps MM como solicitado");
+    imprima("O odometro deve estar em Km");
+    imprima("O volume do tanque em L");
+    imprima("Digite o Numero de paradas que voce fara no caminho: ");
+    n:=leia();
+    imprima("Digite as horas: ");
+    hi:=leia();
     imprima("Digite os minutos: ");
     mini:=leia();
-    imprima("Digite a distancia total do percurso: ");
-    disttotal:=leia();
-    tempoini_min:=horasi*60+mini;
-    imprima("Digite 'p' para entrar no programa");
-    last_odometro:=kmi;
-    enquanto kmf<disttotal ou saida<>'s' faça
-        escolha:=leia();
-        se escolha='p'então
-            imprima("Digite o Odometro atual: ");
-            odometro:=leia();
-            kmf:=kmf+(odometro-last_odometro);
-            last_tempo:=horasi*60+mini;
-            imprima("Digite as horas da parada: ");
-            horasi:=leia();
-            imprima("Digite os minutos da parada: ");
-            mini:=leia();
-            last_tempo:=
-            velocidadep:=(odometro-last_odometro)/(; //incompleto
-            velocidadep:=(odometro-last_odometro)/(((horasi*60+mini)-last_tempo)/60);
-            
+    imprima("Digite o odometro atual do carro: ");
+    odoi:=leia();
+    imprima("Digite o Volume atual do tanque de combustivel: ");
+    gi:=leia();
+    imprima("Distancia a ser percorrida: ");
+    km:=leia();
+    minn:=mini;
+    odon:=odoi;
+    hn:=hi;
+    gn:=gn+gi;
+    para i de 1 até n passo 1 faça
+        imprima("Parada: ", i);
+        imprima("Que horas sao?: ");
+        h:=leia();
+        imprima("Que minutos sao?: ");
+        min:=leia();
+        imprima("Qual o valor atual do odometro?: ");
+        odo:=leia();
+        imprima("Volume atual do tanque de combustivel?: ");
+        g:=leia();
+        imprima("Foi abastecido quantos litros de combustivel?: ");
+        gc:=leia();
+        t:=(min-minn)/60.0;
+        se minn>min então
+            t:=t*-1;
+            t:=t-1;
         fim-se
-    fim-enquanto 
+        se minn>min então
+            tempomin:=min+60-minn;
+            tempomin:=tempomin+((h-1)-hn)*60;
+        fim-se
+        t:=t+(h-hn);
+        s:=odo-odon;
+        imprima("Distancia: ", s);
+        imprima("Tempo: ", t);
+        odon:=odo;
+        hn:=h;
+        minn:=min;
+        gn:=gn-g;
+        imprima("Velocidade Media Parcial: ",(s/t),"Km/h");
+        imprima("Consumo de combustivel: ",(s/gn),"Km/L");
+        
+        imprima("Previsao de chegada: ",tempomin/60,":", tempomin%60);
+    fim-para
+
 fim
+
+
