@@ -86,7 +86,7 @@ int main(void)
         gn-=g;
         temp=s/t;
         printf("Velocidade media final de viagem =%fKm/h",temp);
-        temp=s/gi;
+        temp=s/gn;
         printf("\nConsumo total= %fKm/l",temp);
         return EXIT_SUCCESS;
    }
