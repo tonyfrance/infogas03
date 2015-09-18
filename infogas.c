@@ -4,28 +4,28 @@
 int main(void)
 {
     
-    int ab;
-    float t,n,h,hi,hn,mini,minn,min,gi,gn,g,mv,gc,odo,odon,odoi,i,s,km,odox;
-    
-    printf("\n\n\t\tINTRUCOES:\n");
+
+    float t,temp,n,hi,h,hn,mini,min,minn,gn,g,gc,odo,odon,odoi,i,s,km;
+    char ab;
+    printf("\n\nINTRUCOES:\n");
     printf("\n1-A hora de ver se coloca n:n(EX:10:30).\n");
-    printf("2-Odometro deve esta em km.\n");
+    printf("2-Odometro deve estar em km.\n");
     printf("3-O volume do tanque deve estar em L\n");
-    printf("Digite o numero de paradas que você fara no caminho:\n");
+    printf("Digite o numero de paradas que você fará no caminho:\n");
     scanf("%f",&n);
-    printf("Digite que horas sao:\n");
+    printf("Digite que horas são:\n");
     scanf("%f:%f",&hi,&mini);
     printf("Digite o odometro atual do carro:\n");
     scanf("%f",&odoi);
     printf("Digite volume atual do tanque de combustivel:\n");
-    scanf("%f",&gi);
+    scanf("%f",&gn);
     printf("Distancia a ser percorrida:\n");
     scanf("%f",&km);
+    hn=hi;
     minn=mini;
     odon=odoi;
-    hn=hi;
-    
-    for(i=0;i<n;i++)
+   
+    for(i=0;i<n-1;i++)
     {
         printf("Parada %f:\n",i+1);
         printf("Que horas são?\n");
