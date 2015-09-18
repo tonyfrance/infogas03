@@ -76,7 +76,7 @@ int main(void)
 
         }                        
         t=(min-mini)/60;
-        if(mini>min)
+        if(minn>min)
         {
             t*=-1;
             t-=1;
@@ -84,8 +84,11 @@ int main(void)
         t+=(h-hi);
         s=odo-odoi;
         gn-=g;
-        printf("Velocidade media final de viagem =%fKm/h", s/t);
-        printf("\nConsumo total= %fKm/l", s/gn);
+        temp=s/t;
+        printf("Velocidade media final de viagem =%fKm/h",temp);
+        temp=s/gi;
+        printf("\nConsumo total= %fKm/l",temp);
+        return EXIT_SUCCESS;
    }
 
 
