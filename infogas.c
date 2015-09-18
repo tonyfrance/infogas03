@@ -5,7 +5,7 @@ int main(void)
 {
     
 
-    float t,temp,n,hi,h,hn,mini,min,minn,gn,g,gc,odo,odon,odoi,i,s,km;
+    float t,temp,n,hi,h,hn,mini,min,minn,gn,cmt,g,gc,odo,odon,odoi,i,s,km;
     char ab;
     printf("\n\nINTRUCOES:\n");
     printf("\n1-A hora que deve ser colocada seguindo o exemplo n:n(EX:10:30).\n");
@@ -53,30 +53,32 @@ int main(void)
         hn=h;
         minn=min;
         gn-=g;
+        if (gn<0)
+        {
+           gn *= -1;
+        }
         temp=s/gn;
         km-=s;
-    }
         printf("Consumo de Combustivel = %fKm/l\n",temp);
         temp=km/(s/t);
         printf("Previsao de chegada no destino = %fHoras\n",temp);
         gn+=gc;
-       /* printf("Ultima parada: \n");*/
-        printf("\nQue horas sao?\n");
-        scanf("%f:%f", &h, &min);
-        printf("Valor atual do odometro?\n");
-        scanf("%f",&odo);
-        printf("Volume atual do tanque do combustivel?\n");
-        scanf("%f",&g);
+    }
+                 
         printf("Ultimo abastecimento? (s/n)\n");
         scanf("%c",&ab);
-        fflush(stdin);
-                
+        scanf("%c",&ab);
+
         if(ab=='s')
         {
             printf("\nFoi Abastecido quantos litros de gasolina?\n");
             scanf("%f", &gc);
+            printf("\nQue horas sao?\n");
+            scanf("%f:%f", &h, &min);
+            printf("Valor atual do odometro?\n");
+            scanf("%f",&odo);
 
-        }                        
+        }
         t=(min-mini)/60;
         if(minn>min)
         {
@@ -84,12 +86,14 @@ int main(void)
             t-=1;
         }
         t+=(h-hi);
+        printf("%g", t);
         s=odo-odoi;
         gn-=g;
         temp=s/t;
-        printf("Velocidade media final de viagem =%fKm/h",temp);
-        temp=s/gn;
-        printf("\nConsumo total= %fKm/l",temp);        
+        
+        printf("\nVelocidade media final de viagem =%fKm/h",temp);
+        cmt=s/gn;
+        printf("\nConsumo total= %fKm/l\n\n",cmt);        
         
         return EXIT_SUCCESS;
 }
