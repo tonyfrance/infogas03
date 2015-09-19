@@ -105,13 +105,13 @@ int main(void)
             t-=1;
         }
         t+=(h-hi);
-        printf("%g", t);
         s=odo-odoi;
         gn-=g;
         temp=s/t;
         
+        printf("\nTempo total de viagem =%.2fh",t);
         printf("\nVelocidade média final de viagem =%fKm/h",temp);
-        cmt=s/gn;
+        cmt=s/-gn;
         printf("\nConsumo total= %fKm/l\n\n",cmt);        
         
         return EXIT_SUCCESS;
