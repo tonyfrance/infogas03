@@ -44,7 +44,7 @@ int main(void)
     minn=mini;
     odon=odoi;
    
-    for(i=0;i<n-1;i++)
+    for(i=0;i<n;i++)
     {
         t=0;
         printf("Parada %f:\n",i+1);
@@ -108,8 +108,11 @@ int main(void)
         s=odo-odoi;
         gn-=g;
         temp=s/t;
-        
-        printf("\nTempo total de viagem =%.2fh",t);
+        int temphh;
+        float tempminn;
+        temphh=(int)t;
+        tempminn=(float) (t-temphh)*60;
+        printf("\nTempo total de viagem = %02d:%02.0f",temphh, tempminn);
         printf("\nVelocidade média final de viagem =%fKm/h",temp);
         cmt=s/-gn;
         printf("\nConsumo total= %fKm/l\n\n",cmt);        
