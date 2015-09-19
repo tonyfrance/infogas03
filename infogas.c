@@ -71,12 +71,8 @@ int main(void)
         odon=odo;
         hn=h;
         minn=min;
-        gn-=g;
-        if (gn<0)
-        {
-           gn *= -1;
-        }
-        temp=s/gn;
+        temp=s/(gn-g);
+        gn-=(gn-g);
         km-=s;
         printf("Consumo de Combustível = %fKm/l\n",temp);
         temp=km/(s/t);
