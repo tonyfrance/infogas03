@@ -72,12 +72,12 @@ início
         fim-se
         t:=t+(h-hn);
         s:=odo-odon;
-        imprima("Distancia: ", s);
+        imprima("Distancia percorrida na parada: ", s);
         imprima("Tempo: ", t);
         odon:=odo;
         hn:=h;
         minn:=min;
-        imprima(gn);
+        imprima("Gasolina abastecida: ",gn);
         imprima("Velocidade Media Parcial: ",(s/t),"Km/h");
         imprima("Consumo de combustivel: ",(s/(gn-g)),"Km/L");
         gn:=gn-(gn-g);
@@ -86,7 +86,7 @@ início
         gn:=gn+gc;
         htemp:=temp;
         mintemp:=(temp-htemp)*60;
-        imprima("Previsao de chegada: ",htemp,":",mintemp);
+        imprima( "Previsao de chegada: ",htemp,":",mintemp);
         
     fim-para
 

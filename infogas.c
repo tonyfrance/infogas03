@@ -101,8 +101,8 @@ int main(void)
             t-=1;
         }
         t+=(h-hi);
+        gn-=(gn-g);
         s=odo-odoi;
-        gn-=g;
         temp=s/t;
         int temphh;
         float tempminn;
@@ -110,7 +110,7 @@ int main(void)
         tempminn=(float) (t-temphh)*60;
         printf("\nTempo total de viagem = %02dh:%02.0fmin",temphh, tempminn);
         printf("\nVelocidade média final de viagem =%fKm/h",temp);
-        cmt=s/-gn;
+        cmt=s/gn;
         printf("\nConsumo total= %fKm/l\n\n",cmt);        
         
         return EXIT_SUCCESS;
