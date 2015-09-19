@@ -69,7 +69,7 @@ int main(void)
         scanf("%c",&ab);
         scanf("%c",&ab);
 
-        if(ab=='s')
+        if(ab=='n')
         {
             printf("\nFoi Abastecido quantos litros de gasolina?\n");
             scanf("%f", &gc);
