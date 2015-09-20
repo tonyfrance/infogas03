@@ -78,7 +78,11 @@ int main(void)
         km-=s;
         printf("Consumo de Combustível = %.2fKm/l\n",temp);
         temp=km/(s/t);
-        printf("Previsão de chegada no destino = %.2fHoras\n",temp);
+        int temphh;
+        float tempminn;
+        temphh=(int)temp;
+        tempminn=(float) (temp-temphh)*60;
+        printf("Previsão de chegada no destino = %02dH%02.0fmin\n",temphh,tempminn);
         gn+=gc;
     }
                  
@@ -105,6 +109,7 @@ int main(void)
         t+=(h-hi);
         gn-=(gn-g);
         s=odo-odoi;
+
         temp=s/t;
         int temphh;
         float tempminn;
