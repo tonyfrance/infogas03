@@ -30,21 +30,21 @@ variáveis
 fim-variáveis
 
 início
-    imprima("Instrucoes");
+    imprima("Instruções");
     imprima("A hora deve ser colocada em HH e dps MM como solicitado");
-    imprima("O odometro deve estar em Km");
+    imprima("O odômetro deve estar em Km");
     imprima("O volume do tanque em L");
-    imprima("Digite o Numero de paradas que voce fara no caminho: ");
+    imprima("Digite o Número de paradas que você fará no caminho: ");
     n:=leia();
     imprima("Digite as horas: ");
     hi:=leia();
     imprima("Digite os minutos: ");
     mini:=leia();
-    imprima("Digite o odometro atual do carro: ");
+    imprima("Digite o odômetro atual do carro: ");
     odoi:=leia();
-    imprima("Digite o Volume atual do tanque de combustivel: ");
+    imprima("Digite o Volume atual do tanque de combustível: ");
     gi:=leia();
-    imprima("Distancia a ser percorrida: ");
+    imprima("Distância total a ser percorrida na viagem: ");
     km:=leia();
     kmi:=km;
     minn:=mini;
@@ -55,15 +55,15 @@ início
     gn:=gn+gi;
     para i de 1  até n passo 1 faça
         imprima("Parada: ", i);
-        imprima("Que horas sao?: ");
+        imprima("Que horas são?: ");
         h:=leia();
-        imprima("Que minutos sao?: ");
+        imprima("Que minutos são?: ");
         min:=leia();
-        imprima("Qual o valor atual do odometro?: ");
+        imprima("Qual o valor atual do odômetro?: ");
         odo:=leia();
-        imprima("Volume atual do tanque de combustivel?: ");
+        imprima("Volume atual do tanque de combustível?: ");
         g:=leia();
-        imprima("Foi abastecido quantos litros de combustivel?: ");
+        imprima("Foram abastecidos quantos litros de combustível?: ");
         gc:=leia();
         t:=(min-minn)/60.0;
         se minn>min então
@@ -80,8 +80,8 @@ início
         hn:=h;
         minn:=min;
         imprima("Gasolina atual do tanque: ",gn,"L");
-        imprima("Velocidade Media Parcial: ",(s/t),"Km/h");
-        imprima("Consumo de combustivel: ",(s/(gn-g)),"Km/L");
+        imprima("Velocidade Média Parcial: ",(s/t),"Km/h");
+        imprima("Consumo de combustível: ",(s/(gn-g)),"Km/L");
         consumof:=consumof+(s/(gn-g));
         gn:=gn-(gn-g);
         km:=km-s;
@@ -89,9 +89,9 @@ início
         gn:=gn+gc;
         htemp:=temp;
         mintemp:=(temp-htemp)*60;
-        imprima( "Previsao de chegada: ",htemp,"h",mintemp,"min");
+        imprima( "Previsão de chegada: ",htemp,"h",mintemp,"min");
         se i=n então
-          imprima("ULTIMO ABASTECIMENTO? s/n ");
+          imprima("ÚLTIMO ABASTECIMENTO? s/n ");
           ab:=leia();
           se ab=n então
             n:=n+1;
@@ -109,8 +109,8 @@ início
     mintemp:=(t-htemp)*60;
 
     imprima("Tempo Total de viagem: ",htemp,"h",mintemp,"min" );
-    imprima("Media do Consumo Final: ", consumof/n,"Km/l");
-    imprima("Velocidade Media total da viagem: ",kmi/t,"Km/h");
+    imprima("Média do Consumo Final: ", consumof/n,"Km/l");
+    imprima("Velocidade Média total da viagem: ",kmi/t,"Km/h");
 
 
 fim
