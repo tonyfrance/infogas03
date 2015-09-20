@@ -5,7 +5,7 @@ int main(void)
 {
     
 
-    float t,temp,n,hi,h,hn,mini,min,minn,cmt,gn,g,gc,odo,odon,odoi,i,s,km;
+    float t,temp,n,hi,h,hn,mini,min,minn,cmt,gn,g,gc,odo,odon,odoi,i,s,km,cof;
     char ab;
     /*t= temp=tempo*/
     /*n= numero de paradas*/
@@ -25,6 +25,7 @@ int main(void)
     /*i= variável intermediária*/
     /*s= espaço*/
     /*km= kilometro*/
+    /*cof= consumo medio final*/
 
     printf("\n\nINSTRUÇÕES:\n");
     printf("\n1-A hora que deve ser colocada seguindo o exemplo n:n(EX:10:30).\n");
@@ -72,6 +73,7 @@ int main(void)
         hn=h;
         minn=min;
         temp=s/(gn-g);
+        cof+=temp;
         gn-=(gn-g);
         km-=s;
         printf("Consumo de Combustível = %fKm/l\n",temp);
@@ -111,7 +113,7 @@ int main(void)
         printf("\nTempo total de viagem = %02dh:%02.0fmin",temphh, tempminn);
         printf("\nVelocidade média final de viagem =%fKm/h",temp);
         cmt=s/gn;
-        printf("\nConsumo total= %fKm/l\n\n",cmt);        
+        printf("\nConsumo medio total= %fKm/l\n\n",cof/n);        
         
         return EXIT_SUCCESS;
 }
